@@ -11,7 +11,7 @@
 <div class="login-box">
 <img class="avatar"src="img/iconito.png" alt="Logo de gina">
 <h1>Inicie aqui</h1>
-<form>
+<form action="#" method="POST" onsubmit="miFuncion()" >
  <!--username-->
  <label for="usuario">Usuario</label>
  <input type="text" placeholder="Ingrese su usuario">
@@ -22,11 +22,19 @@
 <div class="g-recaptcha" data-sitekey="6LfGGyUaAAAAACGVX3eDtuKad54VGMFGkMoRQkZ2"></div>
 <br/>
 <input type="submit" value="Iniciar sesion">
-
 <a href="#">¿Has olvidado tu contraseña?</a>
 <a href="#">¿No tienes una cuenta?</a>
 </form>
 </div> 
-
+<script> 
+    function miFuncion(){
+        var response = grecaptcha.getResponse();
+        if(response.length == 0){
+        alert("Captcha no verificado")
+        } else {
+        alert("Captcha verificado");
+        }
+    }
+    </script>
  </body>
  </html>
