@@ -11,7 +11,7 @@
 <div class="login-box">
 <img class="avatar"src="img/iconito.png" alt="Logo de gina">
 <h1>Inicie aqui</h1>
-<form action="holamundo.html" method="POST" onsubmit="miFuncion()" >
+<form >
  <!--username-->
  <label for="usuario">Usuario</label>
  <input type="text" placeholder="Ingrese su usuario">
@@ -26,15 +26,6 @@
 <a href="#">¿No tienes una cuenta?</a>
 </form>
 </div> 
-<script> 
-    function miFuncion(){
-        var response = grecaptcha.getResponse();
-        if(response.length == 0){
-        alert("Captcha no verificado")
-        } else {
-        alert("Captcha verificado");
-        }
-    }
-    </script>
+
  </body>
  </html>
